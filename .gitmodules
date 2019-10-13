@@ -1,0 +1,3 @@
+[submodule "submodules/BusTrackingDepot"]
+	path = submodules/BusTrackingDepot
+	url = https://github.com/the-two-busketeers/BusTrackingDepot
