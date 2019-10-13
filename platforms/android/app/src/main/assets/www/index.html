@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "busColor.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+
+        <title>Reading Buses Tracker</title>
+    </head>
+
+    <body>
+        <div id="title">Reading Buses Depot Tracker</div>
+        <div id="search-container">
+          <div id= "search-bar">
+              <input type="text" id="search">
+              <select id = "select-box">
+                  <option value="vehicle">Vehicle ID</option>
+                  <option value="service">Service</option>
+                  <option value="lastService">Last Service</option>
+              </select>
+              <span style="width: 10px"></span>
+              <button onclick="syncBusData()">Refresh Lists</button>
+          </div>
+          <div id ="search-bar">
+              <button onclick="busSort('none')">None</button>
+              <button onclick="busSort('service')">Service</button>
+              <button onclick="busSort('numerical')">Numerical</button>
+              <button onclick="busSort('distance')">Distance</button>
+          </div>
+        </div>
+        <div class="grid-container">
+            <div class="grid-element">
+                <button class="accordion" id="header">Bus is not in the Depot</button>
+
+                <div class ="buslist" id = "running">
+
+                </div>
+            </div>
+            <div class="grid-element">
+                <button class="accordion" id="header">Bus is in the Depot</button>
+                <div class ="buslist" id ="notRunning">
+                    <div style="padding-top: 15%;" id ="removeDiv">
+                        <img class = "spin" src="images/loading-288.png" width="200" height="200" alt="Logo">
+                    </div>
+                </div>
+            </div>
+            <div class="grid-element">
+                <button class="accordion" id="header">We have lost track of this Bus</button>
+                <div class ="buslist" id = "oldService">
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="colors.js"></script>
+        <script src="script.js"></script>
+
+    </body>
+</html>

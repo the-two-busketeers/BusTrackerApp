@@ -27,7 +27,8 @@
     },
     "platforms": [
       "ios",
-      "electron"
+      "electron",
+      "android"
     ]
   }
 }
